@@ -18,7 +18,8 @@ h1 {
     font-weight: 400;
     margin: 0;
 }
-span, button {
+span, button,
+.dealer__input::placeholder {
     font-family: "Work Sans", sans-serif;
     color: #20201F;
     font-size: 19px;
@@ -80,11 +81,16 @@ nav {
     align-items: center;
     justify-content: space-between;
 }
-.tables__btn {
+.btns {
     background-color: transparent;
     border: none;
 }
-.tables__btn_round {
+.tables__btn_round,
+.dealer__btn_round,
+.terrace__btn_round,
+.offer__btn_round,
+.retailer__btn_round,
+.request__btn_round {
     border-radius: 1px;
     border: solid 1px #20201F;
     border-radius: 40px;
@@ -110,21 +116,35 @@ nav {
     bottom: -125px;
     left: 0;
 }
+.collections {
+    padding-top: 116px;
+    padding-bottom: 171px;
+    background-color: #E5E2DE;
+}
+
 .collections__title {
     margin-bottom: 30px;
 }
+
 .collections__item {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    column-gap: 28px;
+    row-gap: 8px;
+}
+  
+.collections__elem {
+    white-space: nowrap;
 }
 
-.collections__info {
+.collections__headline {
     display: flex;
     flex-direction: column;
-    width: 658px;
     margin-bottom: 94px;
 }
-.collections__card {
+.collections__card_bottom,
+.collections__card_right {
     width: 590px;
 }
 .card__img {
@@ -132,9 +152,14 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("./images/collection__img_bottom.png");
     height: 380px;
     margin-bottom: 18px;
+}
+.card__img_bottom {
+    background-image: url("./images/collection__img_bottom.png");
+}
+.card__img_right {
+    background-image: url("./images/collection__img_right.png");
 }
 .img__text_center {
     font-size: 45px;
@@ -153,4 +178,156 @@ nav {
 .info__text {
     font-size: 16px;
 
+}
+.collections__info {
+    display: flex;
+    position: relative;
+
+}
+.collections__card_right {
+    position: absolute;
+    right: -225px;
+}
+.dealer,
+.retailer {
+    position: relative;
+    display: flex;
+}
+.dealer__info,
+.retailer__info {
+    padding-top: 116px;
+}
+.dealer__title,
+.retailer__title {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* width: 20%; */
+    column-gap: 28px;
+    row-gap: 8px;
+    margin-bottom: 50px;
+}
+.dealer__title_part,
+.retailer__title_part,
+.form__email {
+    display: flex;
+    width: 24%;
+    justify-content: space-between;
+}
+.dealer__text {
+    width: 51%;
+    margin-bottom: 35px;
+}
+.dealer__text span {
+    line-height: 33px;
+}
+.dealer__search,
+.retailer__search {
+    display: flex;
+    flex-direction: column;
+}
+.dealer__input {
+    width: 323px;
+    height: 62px;
+    border: solid 1px #8B8B8B;
+    border-radius: 14px;
+    margin-bottom: 37px;
+    
+}
+.dealer__input::placeholder {
+    color: #8B8B8B;
+    padding-left: 23px;
+}
+.dealer__img_marble,
+.retailer__img {
+    width: 600px;
+}
+.terrace__title {
+    display: flex;
+    flex-direction: column;
+    row-gap: 160px;
+    align-items: center;
+    text-align: center;
+    color: #E5E2DE;
+    padding-top: 116px;
+    background-color:#20201F;
+    padding-bottom: 161px;
+    /* z-index: 999; */
+    
+}
+
+.terrace__btn_round {
+    color: #E5E2DE;
+    border-color: #E5E2DE;
+    width: 179px;
+}
+.terrace {
+    position: relative;
+}
+.terrace__img {
+    position: absolute;
+    width: 250px;
+}
+.terrace__img_left {
+    top: 0;
+    left: 0;
+}
+.terrace__img_right-top {
+    height: 225px;
+    top: 84px;
+    right: -84px;
+    /* z-index: -1; */
+}
+.terrace__img_right-bottom {
+    right: 14px;
+    bottom: -88px;
+}
+.offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 121px;
+    margin-bottom: 115px;
+    row-gap: 34px;
+}
+.retailer {
+    padding-left: 684px;
+    background-color: #F7F7F7;
+}
+.retailer__img {
+    position: absolute;
+    height: 840px;
+    left: -84px;
+}
+.retailer__text {
+    width: 60%;
+    line-height: 33px;
+    margin-bottom: 62px;
+}
+.retailer__title_part {
+    display: flex;
+    width: 50%;
+}
+.retailer__info {
+    padding-bottom: 319px;
+}
+/* .img_man {
+    position: relative;
+}
+.img_man img {
+    position: absolute;
+    left: -84px;
+} */
+.request__info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+.request__title span {
+    font-size: 30px;
+}
+.form__email {
+    display: flex;
+    width: 15%;
 }
