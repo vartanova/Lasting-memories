@@ -1,6 +1,6 @@
 
 body {
-    background-image: url("./images/main__image.jpg");
+    background-image: url("./images/main__img.png");
     background-repeat: no-repeat;
     background-size: auto 868px;
     margin: 0;
@@ -8,8 +8,23 @@ body {
     font-weight: 400;
     color: #20201F;
     padding-top: 45px;
+    
+}
+.wrap {
     padding-left: 84px;
-    margin-right: 84px;
+    padding-right: 84px;
+}
+.background_grey-dark {
+    background-color: #E5E2DE;
+}
+.background_grey-light {
+    background-color: #F7F7F7;
+}
+.background_white {
+    background-color: white;
+}
+.background_dark {
+    background-color: #20201F;
 }
 h1 {
     font-size: 68px;
@@ -61,6 +76,7 @@ nav {
 .title_white {
     color: white;
 }
+
 .tables__title {
     margin-bottom: 50px;
 }
@@ -85,12 +101,17 @@ nav {
     background-color: transparent;
     border: none;
 }
+.btn_without-border {
+    border: none;
+    background: transparent;
+}
 .tables__btn_round,
 .dealer__btn_round,
 .terrace__btn_round,
 .offer__btn_round,
 .retailer__btn_round,
-.request__btn_round {
+.request__btn_round,
+.request__btn {
     border-radius: 1px;
     border: solid 1px #20201F;
     border-radius: 40px;
@@ -115,11 +136,11 @@ nav {
     position: absolute;
     bottom: -125px;
     left: 0;
+    z-index: -1;
 }
 .collections {
     padding-top: 116px;
     padding-bottom: 171px;
-    background-color: #E5E2DE;
 }
 
 .collections__title {
@@ -202,7 +223,6 @@ nav {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    /* width: 20%; */
     column-gap: 28px;
     row-gap: 8px;
     margin-bottom: 50px;
@@ -226,12 +246,16 @@ nav {
     display: flex;
     flex-direction: column;
 }
-.dealer__input {
+.dealer__search {
+    margin-bottom: 254px;
+}
+.dealer__input{
     width: 323px;
     height: 62px;
     border: solid 1px #8B8B8B;
     border-radius: 14px;
     margin-bottom: 37px;
+    
     
 }
 .dealer__input::placeholder {
@@ -242,6 +266,13 @@ nav {
 .retailer__img {
     width: 600px;
 }
+.wrap {
+    position: relative;
+}
+.dealer__img_marble {
+    position: absolute;
+    right: -84px;
+}
 .terrace__title {
     display: flex;
     flex-direction: column;
@@ -250,9 +281,7 @@ nav {
     text-align: center;
     color: #E5E2DE;
     padding-top: 116px;
-    background-color:#20201F;
     padding-bottom: 161px;
-    /* z-index: 999; */
     
 }
 
@@ -276,11 +305,15 @@ nav {
     height: 225px;
     top: 84px;
     right: -84px;
-    /* z-index: -1; */
 }
 .terrace__img_right-bottom {
     right: 14px;
     bottom: -88px;
+}
+.background_dark {
+    background-image: url('./images/terrace__img_right-bottom.png');
+    background-repeat: no-repeat;
+    background-position: right 84px bottom -88px;
 }
 .offer {
     display: flex;
@@ -293,7 +326,6 @@ nav {
 }
 .retailer {
     padding-left: 684px;
-    background-color: #F7F7F7;
 }
 .retailer__img {
     position: absolute;
@@ -329,5 +361,111 @@ nav {
 }
 .form__email {
     display: flex;
-    width: 15%;
+    width: 180px;
+}
+.form__email span {
+    margin-bottom: 23px;
+}
+.request__btn_round {
+    width: 100px;
+}
+.request__input,
+.dealer__input {
+    display: flex;
+    align-items: center;
+    width: 20px;
+    width: 342px;
+    height: 62px;
+    border: solid 1px #8B8B8B;
+    border-radius: 14px;
+    background-color: transparent;
+    font-size: 16px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    
+}
+.cross-small {
+    width: 20px;
+    height: 20px;
+}
+.request__input img {
+    width: 20px;
+}
+.request__input_email,
+.dealer__input_email{
+    font-size: 16px;
+    color: #8B8B8B;
+    border: none;
+    background-color: transparent;
+    width: 300px;
+}
+.request__btn {
+    display: flex;
+
+    width: 500px;
+    height: 40px;
+    border-color: #8B8B8B;
+    border-radius: 14px;
+    align-items: center;
+
+}
+.request__deal {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.request__btn_agree {
+    margin: 0;
+    margin-right: 3%;
+    width: 20px;
+    height: 20px;
+}
+.request__btn_agree {
+    appearance: none;
+    background-color: transparent;
+    border: 1px solid #8B8B8B;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.request__btn_agree:checked {
+    background-color: #8B8B8B;
+}
+.request {
+    padding-bottom: 57px;
+}
+.request__input_email:focus,
+.dealer__input_email:focus {
+    color: #20201F;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    outline: none;
+}
+
+.btns:hover {
+    background-color: #20201F;
+    color: white;
+    transition: .4s;
+    cursor: pointer;
+}
+.terrace__btn_round:hover {
+    background-color: white;
+    color: #20201F;
+    transition: .4s;
+    cursor: pointer;
+}
+.btn_without-border:hover {
+    cursor: pointer;
+
+}
+.nav__elem:hover,
+.collections__elem:hover {
+    cursor: pointer;
+    border-bottom: white solid 1px;
+    transition: .4s;
+    padding-top: 10px;
+}
+.collections__elem:hover {
+    border-bottom: #20201F solid 1px;
+    
 }
