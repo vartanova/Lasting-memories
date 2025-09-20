@@ -1,3 +1,5 @@
+let clearDealerInput = function () {document.getElementById('dealerInput').value =' '}
+document.getElementById( 'dealerCrossSmall').onclick = clearDealerInput 
 
-let clearInput = function () {document.getElementById('requestInput').value =' '}
-document.getElementById('crossSmall').onclick = clearInput 
+let clearRequestInput = function () {document.getElementById('requestInput').value =' '}
+document.getElementById('requestCrossSmall').onclick = clearRequestInput 
